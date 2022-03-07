@@ -1,4 +1,4 @@
-package com.sarik.learn.lamdas.myfunctional;
+package com.sarik.learn.myfunctional;
 
 @FunctionalInterface
 public interface PrintSomeThing {

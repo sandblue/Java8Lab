@@ -1,6 +1,6 @@
 package com.sarik.learn.lamdas;
 
-import com.sarik.learn.lamdas.myfunctional.PrintSomeThing;
+import com.sarik.learn.myfunctional.PrintSomeThing;
 
 public class PrintSomeThingLambda {
 
