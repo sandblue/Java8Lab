@@ -17,10 +17,10 @@ public class SupplierLab {
 
     public static void main(String[] args) {
 
-        Game student = gameSupplier.get();
+        Game game = gameSupplier.get();
 
-        System.out.println("Student is : " + student);
+        System.out.println("game is : " + game);
 
-        System.out.println("Students are : " + gamesSupplier.get());
+        System.out.println("games are : " + gamesSupplier.get());
     }
 }
