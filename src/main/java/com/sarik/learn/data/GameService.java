@@ -4,8 +4,11 @@ import com.sarik.learn.data.model.Game;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class GameService {
+
+    public static Supplier<Game> gameSupplier = () -> new Game("Game Supplier result", 6600, "yoga s", 5.0);
 
     public static List<Game> getAllGames(){
         List games = new ArrayList();

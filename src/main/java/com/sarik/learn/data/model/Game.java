@@ -7,6 +7,14 @@ public class Game {
     private Integer price;
     private Double rating;
 
+    public Game(){
+
+    }
+
+    public Game(String name){
+        this.name = name;
+    }
+
     public Game(String name, Integer price, String detail, Double rating) {
         this.name = name;
         this.price = price;
@@ -44,6 +52,10 @@ public class Game {
 
     public void setRating(Double rating) {
         this.rating = rating;
+    }
+
+    public void printAllDetail(){
+        System.out.println(this.name + " " + this.detail);
     }
 
     @Override
