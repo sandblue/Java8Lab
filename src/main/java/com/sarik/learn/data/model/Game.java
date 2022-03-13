@@ -1,11 +1,15 @@
 package com.sarik.learn.data.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Game {
 
     private String name;
     private String detail;
     private Integer price;
     private Double rating;
+    private List<String> dlc = new ArrayList<>();
 
     public Game(){
 
@@ -21,6 +25,15 @@ public class Game {
         this.detail = detail;
         this.rating = rating;
     }
+
+    public Game(String name, Integer price, String detail, Double rating, List<String> dlc) {
+        this.name = name;
+        this.price = price;
+        this.detail = detail;
+        this.rating = rating;
+        this.dlc = dlc;
+    }
+
 
     public String getName() {
         return name;
@@ -58,6 +71,14 @@ public class Game {
         System.out.println(this.name + " " + this.detail);
     }
 
+    public List<String> getDlc() {
+        return dlc;
+    }
+
+    public void setDlc(List<String> dlc) {
+        this.dlc = dlc;
+    }
+
     @Override
     public String toString() {
         return "Game{" +
@@ -65,6 +86,7 @@ public class Game {
                 ", detail='" + detail + '\'' +
                 ", price=" + price +
                 ", rating=" + rating +
+                ", dlc=" + dlc +
                 '}';
     }
 }
