@@ -33,10 +33,10 @@ public class StreamsGroupingLab {
      */
     public  static void twoLevelGrouping(){
 
-        Map<String,  Map<String,List<Game>>> studentMap =   GameService.getAllGames().stream()
+        Map<String,  Map<String,List<Game>>> gameMap =   GameService.getAllGames().stream()
                 .collect(groupingBy(Game::getType, groupingBy(game -> game.getRating() >= 3.8 ?  "OUTSTANDING" : "AVERAGE")));
 
-        Stream.of(studentMap).forEach(System.out::println);
+        Stream.of(gameMap).forEach(System.out::println);
 
     }
 
