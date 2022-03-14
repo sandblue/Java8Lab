@@ -95,20 +95,20 @@ public class StreamsGroupingLab {
 
     public  static void calculateMinRateGameInEachType(){
 
-        Map<String, Optional<Game>> studentMapOptional = GameService.getAllGames().stream()
+        Map<String, Optional<Game>> gameMapOptional = GameService.getAllGames().stream()
                 .collect(groupingBy(Game::getType,minBy(Comparator.comparingDouble(Game::getRating))
                 ));
 
-        Stream.of(studentMapOptional).forEach(System.out::println);
+        Stream.of(gameMapOptional).forEach(System.out::println);
 
 
-        Map<String, Game> studentMap = GameService.getAllGames().stream()
+        Map<String, Game> gameMap = GameService.getAllGames().stream()
                 .collect(groupingBy(Game::getType,
                         collectingAndThen(minBy(Comparator.comparingDouble(Game::getRating))
                                 ,Optional::get
                         )));
 
-        Stream.of(studentMap).forEach(System.out::println);
+        Stream.of(gameMap).forEach(System.out::println);
     }
 
     public static void main(String[] args) {
