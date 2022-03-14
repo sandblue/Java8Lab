@@ -9,6 +9,7 @@ public class Game {
     private String detail;
     private Integer price;
     private Double rating;
+    private String type;
     private List<String> dlc = new ArrayList<>();
 
     public Game(){
@@ -32,6 +33,15 @@ public class Game {
         this.detail = detail;
         this.rating = rating;
         this.dlc = dlc;
+    }
+
+    public Game(String name, Integer price, String detail, Double rating, List<String> dlc, String type) {
+        this.name = name;
+        this.price = price;
+        this.detail = detail;
+        this.rating = rating;
+        this.dlc = dlc;
+        this.type = type;
     }
 
 
@@ -79,6 +89,14 @@ public class Game {
         this.dlc = dlc;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "Game{" +
@@ -86,6 +104,7 @@ public class Game {
                 ", detail='" + detail + '\'' +
                 ", price=" + price +
                 ", rating=" + rating +
+                ", type='" + type + '\'' +
                 ", dlc=" + dlc +
                 '}';
     }

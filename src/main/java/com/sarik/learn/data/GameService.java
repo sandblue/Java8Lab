@@ -13,10 +13,11 @@ public class GameService {
 
     public static List<Game> getAllGames(){
         List games = new ArrayList();
-        games.add(new Game("Elder Scroll Online", 350, "bla bla", 4.0, Arrays.asList("Elswer", "Black Wood")));
-        games.add(new Game("Guild War 2", 1500, "foo foo", 4.5, Arrays.asList("Path of fire")));
-        games.add(new Game("You gun is ..", 122, "yoga yoga", 2.0, Arrays.asList("Burn")));
-        games.add(new Game("Tale Runner", 600, "yoga yoga", 3.0));
+        games.add(new Game("Elder Scroll Online", 350, "bla bla", 4.0, Arrays.asList("Elswer", "Black Wood"), "RPG"));
+        games.add(new Game("Guild War 2", 1500, "foo foo", 4.5, Arrays.asList("Path of fire"), "RPG"));
+        games.add(new Game("You gun is ..", 122, "yoga yoga", 2.0, Arrays.asList("Burn"), "ACTION"));
+        games.add(new Game("Tale Runner", 600, "yoga yoga", 3.0, Arrays.asList(""), "SPORT"));
+        games.add(new Game("Apex", 234, "run and gun", 4.5, Arrays.asList(""), "SHOOTING"));
         return games;
     }
 
